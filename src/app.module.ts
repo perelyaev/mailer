@@ -19,6 +19,9 @@ import { MailModule } from './mail/mail.module';
           user: process.env.MAIL_AUTH_USER,
           pass: process.env.MAIL_AUTH_PASS,
         },
+        tls: {
+          rejectUnauthorized: false,
+        },
       },
     }),
     MailModule,
